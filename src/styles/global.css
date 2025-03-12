@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+@font-face {
+	font-family: "Bellefair";
+	src: url("fonts/bellefair/Bellefair-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Barlow";
+	src: url("fonts/barlow/Barlow-Black.ttf") format("truetype")
+		url("fonts/barlow/Barlow-Bold.ttf") format("truetype")
+		url("fonts/barlow/Barlow-ExtraBold.ttf") format("truetype")
+		url("fonts/barlow/Barlow-ExtraLight.ttf") format("truetype")
+		url("fonts/barlow/Barlow-Light.ttf") format("truetype")
+		url("fonts/barlow/Barlow-Medium.ttf") format("truetype")
+		url("fonts/barlow/Barlow-Regular.ttf") format("truetype")
+		url("fonts/barlow/Barlow-SemiBold.ttf") format("truetype")
+		url("fonts/barlow/Barlow-Thin.ttf") format("truetype");
+	font-weight: 100, 200, 300, 400, 500, 600, 700, 800, 900 ;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "BarlowCondensed";
+	src: url("fonts/barlow_condensed/BarlowCondensed-Black.ttf") format("truetype")
+		url("fonts/barlow_condensed/BarlowCondensed-Bold.ttf") format("truetype")
+		url("fonts/barlow_condensed/BarlowCondensed-ExtraBold.ttf") format("truetype")
+		url("fonts/barlow_condensed/BarlowCondensed-ExtraLight.ttf") format("truetype")
+		url("fonts/barlow_condensed/BarlowCondensed-Light.ttf") format("truetype")
+		url("fonts/barlow_condensed/BarlowCondensed-Medium.ttf") format("truetype")
+		url("fonts/barlow_condensed/BarlowCondensed-Regular.ttf") format("truetype")
+		url("fonts/barlow_condensed/BarlowCondensed-SemiBold.ttf") format("truetype")
+		url("fonts/barlow_condensed/BarlowCondensed-Thin.ttf") format("truetype");
+	font-weight: 100, 200, 300, 400, 500, 600, 700, 800, 900 ;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--space-blue-300: oklch(88.26% 0.0486 277.68);
+}
+
+@layer utilities {
+	.text-space-blue-300 {
+		color: var(--space-blue-300);
+	}
+
+  .font-bellefair {
+		font-family: "Bellefair", serif;
+	}
+
+	.font-barlow {
+		font-family: "Barlow", sans-serif;
+	}
+
+	.font-barlow-condensed {
+		font-family: "BarlowCondensed", sans-serif;
+	}
+}

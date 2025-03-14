@@ -10,15 +10,7 @@
 
 @font-face {
 	font-family: "Barlow";
-	src: url("fonts/barlow/Barlow-Black.ttf") format("truetype")
-		url("fonts/barlow/Barlow-Bold.ttf") format("truetype")
-		url("fonts/barlow/Barlow-ExtraBold.ttf") format("truetype")
-		url("fonts/barlow/Barlow-ExtraLight.ttf") format("truetype")
-		url("fonts/barlow/Barlow-Light.ttf") format("truetype")
-		url("fonts/barlow/Barlow-Medium.ttf") format("truetype")
-		url("fonts/barlow/Barlow-Regular.ttf") format("truetype")
-		url("fonts/barlow/Barlow-SemiBold.ttf") format("truetype")
-		url("fonts/barlow/Barlow-Thin.ttf") format("truetype");
+	src: url("fonts/barlow/Barlow-Regular.ttf") format("truetype");
 	font-weight: 100 900;
 	font-style: normal;
 	font-display: swap;
@@ -26,28 +18,20 @@
 
 @font-face {
 	font-family: "BarlowCondensed";
-	src: url("fonts/barlow_condensed/BarlowCondensed-Black.ttf")
-		format("truetype") url("fonts/barlow_condensed/BarlowCondensed-Bold.ttf")
-		format("truetype")
-		url("fonts/barlow_condensed/BarlowCondensed-ExtraBold.ttf")
-		format("truetype")
-		url("fonts/barlow_condensed/BarlowCondensed-ExtraLight.ttf")
-		format("truetype") url("fonts/barlow_condensed/BarlowCondensed-Light.ttf")
-		format("truetype") url("fonts/barlow_condensed/BarlowCondensed-Medium.ttf")
-		format("truetype") url("fonts/barlow_condensed/BarlowCondensed-Regular.ttf")
-		format("truetype")
-		url("fonts/barlow_condensed/BarlowCondensed-SemiBold.ttf")
-		format("truetype") url("fonts/barlow_condensed/BarlowCondensed-Thin.ttf")
+	src: url("/fonts/barlow_condensed/BarlowCondensed-Regular.ttf")
 		format("truetype");
-	font-weight: 100 900;
+	font-weight: 100;
 	font-style: normal;
 	font-display: swap;
 }
 
 :root {
-	--space-blue-900: oklch(16.23% 0.0214 275.07);
-	--space-blue-300: oklch(88.26% 0.0486 277.68);
-	--space-white: oklch(100% 0 0);
+	/* --font-bellefair: "Bellefair", serif;
+	--font-barlow: "Barlow", sans-serif;
+	--font-barlow-condensed: "BarlowCondensed", sans-serif; */
+	--color-space-blue-900: oklch(16.23% 0.0214 275.07);
+	--color-space-blue-300: oklch(88.26% 0.0486 277.68);
+	--color-space-white: oklch(100% 0 0);
 	--space-spacing-1600: 128px;
 	--space-spacing-1200: 96px;
 	--space-spacing-1000: 80px;
@@ -64,7 +48,7 @@
 }
 
 @layer utilities {
-  /* Font utilities */
+	/* Font utilities */
 	.font-bellefair {
 		font-family: "Bellefair", serif;
 	}
@@ -77,81 +61,110 @@
 		font-family: "BarlowCondensed", sans-serif;
 	}
 
-  /* Text Preset */
-  .space-text-preset-1 {
-    font-family: "Bellefair", serif;
-    font-size: 144px !important;
-    line-height: 171.9% !important;
-    letter-spacing: 0px !important;
-  }
+	/* Text Preset */
+	.space-text-preset-1 {
+		font-family: "Bellefair", serif;
+		font-size: 144px !important;
+		line-height: 171.9% !important;
+		letter-spacing: 0px !important;
+	}
 
-  .space-text-preset-2 {
-    font-family: "Bellefair", serif;
-    font-size: 100px !important;
-    line-height: 114.6% !important;
-    letter-spacing: 0px !important;
-  }
-  
-  .space-text-preset-3 {
-    font-family: "Bellefair", serif;
-    font-size: 56px !important;
-    line-height: 64.2% !important;
-    letter-spacing: 0px !important;
-  }
-  
-  .space-text-preset-4 {
-    font-family: "Bellefair", serif;
-    font-size: 32px !important;
-    line-height: 36.7% !important;
-    letter-spacing: 0px !important;
-  }
-  
-  .space-text-preset-5 {
-    font-family: "BarlowCondensed", sans-serif;
-    font-size: 28px !important;
-    line-height: 33.6% !important;
-    letter-spacing: 4px !important;
-    font-weight: normal !important;
-  }
-  
-  .space-text-preset-6 {
-    font-family: "Bellefair", serif;
-    font-size: 28px !important;
-    line-height: 32.1% !important;
-    letter-spacing: 0px !important;
-  }
-  
-  .space-text-preset-7 {
-    font-family: "BarlowCondensed", sans-serif;
-    font-size: 14px !important;
-    line-height: 16.8% !important;
-    letter-spacing: 2px !important;
-  }
-  
-  .space-text-preset-8 {
-    font-family: "BarlowCondensed", sans-serif;
-    font-size: 16px !important;
-    line-height: 19.2% !important;
-    letter-spacing: 2px !important;
-  }
-  
-  .space-text-preset-9 {
-    font-family: "Barlow", sans-serif;
-    font-size: 18px !important;
-    line-height: 180% !important;
-    letter-spacing: 2px !important;
-  }
+	.space-text-preset-2 {
+		font-family: "Bellefair", serif;
+		font-size: 100px !important;
+		line-height: 114.6% !important;
+		letter-spacing: 0px !important;
+	}
 
-  /* Color utilities */
+	.space-text-preset-3 {
+		font-family: "Bellefair", serif;
+		font-size: 56px !important;
+		line-height: 64.2% !important;
+		letter-spacing: 0px !important;
+	}
+
+	.space-text-preset-4 {
+		font-family: "Bellefair", serif;
+		font-size: 32px !important;
+		line-height: 36.7% !important;
+		letter-spacing: 0px !important;
+	}
+
+	.space-text-preset-5 {
+		font-family: "BarlowCondensed", sans-serif;
+		font-size: 28px !important;
+		line-height: 33.6% !important;
+		letter-spacing: 4px !important;
+		font-weight: normal !important;
+	}
+
+	.space-text-preset-6 {
+		font-family: "Bellefair", serif;
+		font-size: 28px !important;
+		line-height: 32.1% !important;
+		letter-spacing: 0px !important;
+	}
+
+	.space-text-preset-7 {
+		font-family: "BarlowCondensed", sans-serif;
+		font-size: 14px !important;
+		line-height: 16.8% !important;
+		letter-spacing: 2px !important;
+	}
+
+	.space-text-preset-8 {
+		font-family: "BarlowCondensed", sans-serif;
+		font-size: 16px !important;
+		line-height: 19.2% !important;
+		letter-spacing: 2px !important;
+	}
+
+	.space-text-preset-9 {
+		font-family: "Barlow", sans-serif;
+		font-size: 18px !important;
+		line-height: 180% !important;
+		letter-spacing: 2px !important;
+	}
+
+	/* Color utilities */
 	.space-blue-900 {
-		color: var(--space-blue-900);
+		color: var(--color-space-blue-900);
 	}
 
 	.space-blue-300 {
-		color: var(--space-blue-300);
+		color: var(--color-space-blue-300);
 	}
 
 	.space-white {
-		color: var(--space-white);
+		color: var(--color-space-white);
+	}
+
+	.bg-space-blue-300 {
+		background-color: var(--color-space-blue-300);
+	}
+
+	.bg-space-blue-900 {
+		background-color: var(--color-space-blue-900);
+	}
+
+	.bg-space-white {
+		background-color: var(--color-space-white);
+	}
+
+	/* Transparent background utility */
+	.bg-space-white\/10 {
+		background-color: color-mix(
+			in oklch,
+			var(--color-space-white) 5%,
+			transparent
+		);
+	}
+	/* .bg-space-white\/10 {
+    background-color: rgba(var(--color-space-white), 0.05);
+  } */
+
+	/* Text Color Utilities */
+	.text-space-white {
+		color: var(--color-space-white);
 	}
 }

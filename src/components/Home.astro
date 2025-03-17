@@ -2,11 +2,32 @@
 import "../styles/global.css";
 import HomeBackground from "@/assets/HiResRender-1.svg";
 
-import Navbar from "@/components/ui/Navbar"
+import Navbar from "@/components/ui/Navbar";
+import ExploreButton from "./ui/ExploreButton";
 ---
+
 <div>
-  <img src={HomeBackground.src} class="w-screen h-screen object-cover" alt="" fetchpriority="high" />
-  <!-- <main>
-    <Navbar/>
-  </main> -->
+	<img
+		src={HomeBackground.src}
+		class="absolute top-0 left-0 w-screen h-screen object-cover z-0"
+		alt=""
+		fetchpriority="high"
+	/>
+
+	<main class="z-10 mx-40">
+    <div class="fixed bottom-1/6">
+        <div>
+            <div class="space-text-preset-5 text-white uppercase">SO, YOU WANT TO TRAVEL TO</div>
+            <div class="space-text-preset-1 text-white mt-4 uppercase">SPACE</div>
+        </div>
+        <div class="mt-6 max-w-[44rem]">
+            <div class="space-text-preset-9 text-white text-pretty text-justify">
+                Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+            </div>
+        </div>
+    </div>
+    <div class="fixed bottom-1/4 right-1/6 transform translate-y-1/4 p-4">
+        <ExploreButton client:only="react" />
+    </div>
+</main>
 </div>
